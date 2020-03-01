@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Я очень люблю чашку кофе с утра</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.6em);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  /*
+   * Links
+   */
+  a:link {
+    color: #1476b8;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #1430b8;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:active {
+    color: #b81414;
+  }
+
+  /*
+   * Header section
+   */
+  .page-header {
+    padding: 0.4em 1em;
+    background-color: #fff;
+  }
+
+  @media (min-width: 35em) {
+    .page-header {
+      padding: 1em;
+    }
+  }
+
+  .title > h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: .2em 0;
+  }
+
+  @media (min-width: 35em) {
+    .title > h1 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .slogan {
+    color: #888;
+    font-size: 0.875em;
+    margin: 0;
+  }
+
+  /*
+   * Hero image
+   */
+  .hero {
+    padding: 2em 1em;
+    text-align: center;
+    background-image: url(coffee-beans.jpg);
+    background-size: 100%;
+    color: #fff;
+    text-shadow: 0.1em 0.1em 0.3em #000;
+  }
+
+  @media (min-width: 35em) {
+    .hero {
+      padding: 5em 3em;
+      font-size: 1.2rem;
+    }
+  }
+
+  /*
+   * Main section
+   */
+   main {
+     padding: 1em;
+   }
+
+  @media (min-width: 35em) {
+    main {
+      padding: 2em 1em;
+    }
+  }
+
+  .subtitle {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  /*
+   * Menu
+   */
+  .menu {
+    position: relative;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: -1.2em;
+    right: 0.1em;
+    border: 0;
+    background-color: transparent;
+    font-size: 3em;
+    width: 1em;
+    height: 1em;
+    line-height: 0.4;
+    text-indent: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .menu-toggle::after {
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+    display: block;
+    content: "\2261";
+    text-indent: 0;
+  }
+
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .menu.is-open .menu-dropdown {
+    display: block;
+  }
+
+  .nav-menu {
+    margin: 0;
+    padding-left: 0;
+    border: 1px solid #ccc;
+    list-style: none;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .nav-menu > li + li {
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-menu > li > a {
+    display: block;
+    padding: 0.8em 1em;
+    color: #fff;
+    font-weight: normal;
+  }
+
+</style>
+</head>
+
+<body>
+
+<header id="header" class="page-header">
+  <div class="title">
+    <h1>Настоящий кофе из 100% жареных зёрен</h1>
+    <div class="slogan">Пей кофе</div>
+  </div>
+</header>
+
+<nav class="menu" id="main-menu">
+  <button class="menu-toggle" id="toggle-menu">
+    toggle menu
+  </button>
+  <div class="menu-dropdown">
+    <ul class="nav-menu">
+      <li><a href="/about.html">О нас</a></li>
+      <li><a href="/shop.html">Магазин</a></li>
+      <li><a href="/menu.html">Меню</a></li>
+      <li><a href="/brew.html">Чай</a></li>
+    </ul>
+  </div>
+</nav>
+
+<aside id="hero" class="hero">
+  Добро пожаловать на бесплатную дегустацию нашего кофе.
+</aside>
+
+<main id="main">
+  <div class="row">
+    <section class="column">
+      <h2 class="subtitle">Только оригинальное качество</h2>
+      <p>Мы собираем зерна в пик сезона и бережно подготавливаем к обжарке
+        <a href="/batch-size.html">на маленькой сковородке</a>
+        для того, чтобы по максимуму сохранить и передать аромат кофе для вас.</p>
+    </section>
+    <section class="column">
+      <h2 class="subtitle">Расположение</h2>
+      <p>Наш
+        <a href="/house-blend.html">Торговый центр</a>
+        расположен в центре Москвы в двух минутах ходьбы от метро ....</p>
+    </section>
+    <section class="column">
+      <h2 class="subtitle">Сопутствующие товары к кофе</h2>
+      <p>В нашем торговом центре вы помимо кофе можете заказать сливки и даже сахар <a href="/classes.html">БЕСПЛАТНО</a> для того чтобы получить чашку кофе бесплатно - пройдите регистрацию на сайте и покажите уникальный номер вашей учетной записи кассиру в нашем уютном заведении, расположенном по адресу...</p>
+    </section>
+  </div>
+</main>
+
+<script type="text/javascript">
+(function() {
+  var menuButton = document.getElementById('toggle-menu');
+  menuButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    var menu = document.getElementById('main-menu');
+    menu.classList.toggle('is-open');
+  });
+})();
+</script>
+
+</body>
+</html>
